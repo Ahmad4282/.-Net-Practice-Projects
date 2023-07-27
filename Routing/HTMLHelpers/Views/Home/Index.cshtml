@@ -1,0 +1,66 @@
+﻿
+@model HTMLHelpers.Models.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Html Helpers</h1>
+    <div>
+        @Html.TextBox("myTextBox", "Show some value", new { style = "background-color: red; color: white", title = "Please enter your first name" })
+        <br />
+        <br />
+
+        @Html.Label("Label", "Label")
+        <br />
+        <br />
+
+        @Html.Password("my passsword")
+        <br />
+        <br />
+
+        @Html.TextArea("adfadsf", "", 4, 34, null)
+        <br />
+        <br />
+
+        @Html.Hidden("id")
+        @Html.DropDownList("Country", ViewBag.CountryList as SelectList, "Select a country", new { @class = "form-control" })
+        <br />
+        <br />
+
+        @Html.DropDownList(
+                         "dropDowlist",
+                         new SelectList(ViewBag.Departments, "Id", "Name", 2),
+                         "Select Department",
+                         new { @class = "form-control" }
+                         )
+        <br />
+        <br />
+        @foreach (var dep in ViewBag.Departments)
+        {
+            @Html.RadioButton("radio", "myname", false) @dep.Name;
+        }
+        <br />
+        <br />
+
+        @Html.ListBox("mylist box", new MultiSelectList(new[] { "addf", "adfasf", "rwerw" }, new[] { "addf" }))
+        <br />
+        <br />
+        @Html.EditorFor(emp => emp.DepartmentID)
+        <br />
+        <br />
+        <fieldset>
+            <legend>Employee Details</legend>
+            @Html.DisplayForModel()
+        </fieldset>
+        <fieldset>
+            <legend>Employee Details</legend>
+            @Html.EditorFor(model => model)
+        </fieldset>
+    </div>
+</body>
+</html>
