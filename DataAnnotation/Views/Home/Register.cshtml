@@ -1,25 +1,17 @@
-﻿@model DataAnnotation.Models.User
-
-@Html.ValidationSummary()
-
-@using (Html.BeginForm())
-{
-
-    <div>
-        @Html.LabelFor(model => model.FirstName)
-        @Html.TextBoxFor(model => model.FirstName)
-        @Html.ValidationMessageFor(model => model.FirstName)
-    </div>
-
-    <div>
-        @Html.LabelFor(model => model.LastName)
-        @Html.TextBoxFor(model => model.LastName)
-        @Html.ValidationMessageFor(model => model.LastName)
-    </div>
-
-    <input type="submit" value="Register" />
+﻿
+@{
+    Layout = null;
 }
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.3/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>
