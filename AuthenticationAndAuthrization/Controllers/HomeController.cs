@@ -89,6 +89,12 @@ namespace AuthenticationAndAuthrization.Controllers
 
             return View(model);
         }
+        public ActionResult MyAction()
+        {
+            return View();
+        }
+
+
 
     }
 }
