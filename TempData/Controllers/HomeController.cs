@@ -11,16 +11,12 @@ namespace TempData.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            TempData["name"] = "ahmad";
+            TempData["action1"] = "action1";
             return RedirectToAction("About");
         }
         public ActionResult About()
         {
-            if (TempData["name"]!= null)
-            {
-                TempData["name"].ToString();
-            }
-            return View();
+            return Content("Index", TempData["action1"]);
         }
     }
 }
