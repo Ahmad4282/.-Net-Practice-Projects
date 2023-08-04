@@ -27,9 +27,5 @@ namespace Evaluation.Controllers
             return View();
         }
 
-        public ActionResult Contact2()
-        {
-
-        }
     }
 }
